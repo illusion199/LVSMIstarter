@@ -20,6 +20,7 @@
                        </div>
 
                    </div>
+                   
                    <br>
                    <router-link class="btn btn-info" to="/user">Back</router-link>
                   
@@ -32,7 +33,7 @@
 </template>
 
 <script>
-    export default {
+    export default {         
         data() {
             return {
                 uId: this.$route.params.id,
@@ -88,15 +89,15 @@
                 axios
                     .get('/getuserDetail/' + id)
                     .then(res => {
-
                         this.userDetail = res.data;
-
                     })
                     .catch(error => (this.errors = error.response.data.errors));
             },
+     
         },
         mounted() {
-            console.log('User Detail mounted.')
+            console.log('User Detail mounted.');
+           
         }
     }
 </script>

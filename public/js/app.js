@@ -1829,6 +1829,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -95248,18 +95249,15 @@ const app = new Vue({
 
 var routes = [{
   path: '/user',
-  name: 'user-info',
-  component: _components_UserList__WEBPACK_IMPORTED_MODULE_1__["default"],
-  props: true
+  component: _components_UserList__WEBPACK_IMPORTED_MODULE_1__["default"]
 }, {
   path: '/user/:id',
-  name: 'user-detail',
-  component: _components_UserDetail__WEBPACK_IMPORTED_MODULE_0__["default"],
-  props: true
+  component: _components_UserDetail__WEBPACK_IMPORTED_MODULE_0__["default"]
 }];
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_3__["default"]({
   mode: 'history',
   routes: routes,
+  //base: window.location.pathName,
   scrollBehavior: function scrollBehavior() {
     return {
       x: 0,
@@ -95272,7 +95270,8 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_2___default.a({
   router: router,
   components: {
     //ExComponent,
-    UserList: _components_UserList__WEBPACK_IMPORTED_MODULE_1__["default"]
+    //UserList,
+    UserDetail: _components_UserDetail__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   created: function created() {
     console.log('Working Sir!');

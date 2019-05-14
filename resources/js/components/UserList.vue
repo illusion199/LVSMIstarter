@@ -48,10 +48,13 @@
                     })
                     .catch(error => (this.errors = error.response.data.errors));
             },
+             
+          
         },
         mounted() {
             console.log('User List mounted.');
             this.fetchUserinfo();
+             
         }
     }
 </script>

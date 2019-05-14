@@ -110,7 +110,7 @@ class userManagement extends Controller
         */
         public function show($id)
         {
-            //
+            return view('usermanage.index');
         }
         
         /**

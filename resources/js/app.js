@@ -7,6 +7,8 @@ import UserDetail from "./components/UserDetail";
 import UserList from "./components/UserList";
 
 
+
+
 require('./bootstrap');
 
 window.Vue = require('vue');
@@ -44,6 +46,9 @@ Vue.component('Page', Page);
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 
+
+
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -55,26 +60,24 @@ const app = new Vue({
     el: '#app'
 });
 */
+
 const routes = [{
-    path: '/user',
-    name: 'user-info',
+    path: '/user',   
     component: UserList,
-    props: true
-}, {
+  
+}, 
+{
 
-    path: '/user/:id',
-    name: 'user-detail',
+    path: '/user/:id',    
     component: UserDetail,
-    props: true
+  
 
-},
-
-
-]
+}]
 
 const router = new VueRouter({
     mode: 'history',
     routes,
+    //base: window.location.pathName,
     scrollBehavior() {
         return {x: 0, y: 0}
     }
@@ -86,7 +89,8 @@ const app = new Vue({
     router,
     components: {
         //ExComponent,
-        UserList
+        //UserList,
+        UserDetail
 
 
     },

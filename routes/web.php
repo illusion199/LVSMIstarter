@@ -19,14 +19,16 @@ Route::get('/', function () {
 
 //Route::get('/user', 'userManagement@index');
 Route::resource('/user', 'userManagement');
+//Route::get('/user/{id}', 'userManagement@index');
 Route::get('/user-import', 'userManagement@create');
 Route::get('/getuserinfo', 'userManagement@getuserinfoFunc');
 Route::get('/getuserDetail/{id}', 'userManagement@getuserDetailFunc');
 //Route::get('/user-import', 'userManagement@userImportFunc');
 //Route::post('/user-bulk-import', 'userManagement@userBuklImportFunc')->name('bulk-import');
 
-Auth::routes();
 
+
+Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //Route::view('profile', 'profile')->name('profile');
@@ -35,9 +37,15 @@ Route::resource('avatar', 'AvatarController');
 
 
 
+// Route::get('/user/{vue_capture?}', function () {
+//     return view('usermanage.index');
+//    })->where('vue_capture', '[\/\w\.-]*');
 
+//    Route::get('/user/{vue_capture?}', function () {
+//     return view('usermanage.index');
+//    })->where('vue_capture', '[\/\w\.-]*');
 
-Route::get('/{vue_capture?}', function () {
-    return view('frontpage');
-})->where('vue_capture', '[\/\w\.-]*');
-
+//Route::get('/user/{any}', 'userManagement@index')->where('any', '.*');
+// Route::get('/{vue?}', function () {
+//     return view('index');
+// })->where('vue', '[\/\w\.-]*');

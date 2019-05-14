@@ -9,8 +9,7 @@
        <div class="text-center">{{$item}} </div>
     @endforeach
     <form method="POST" action="{{route('avatar.store')}}" enctype="multipart/form-data">
-        @csrf
-        
+        @csrf        
         <div class="input-group mb-3">
             <div class="input-group-prepend">
                 <input type="submit" class="btn btn-info" value="upload">
@@ -18,8 +17,7 @@
             <div class="custom-file">
                 <input type="file" name="avatar" class="custom-file-input">
                 <label class="custom-file-label">Choose file</label>              
-            </div>
-            
+            </div>            
         </div>
     </form> 
     
