@@ -1,0 +1,13 @@
+php artisan make:controller TodoController --resource --model=Todo
+php artisan make:model Todo -mcr
+php artisan make:model /model/Review -mcr
+//create post by factory
+factory('App\Post', 5)->create()
+App\Post::pluck('title')
+App\Post::pluck('content')
+App\Post::where('id', '>', 2)->get()
+//
+DB::table('movers')->get();
+DB::table('movers')->where('id',1)->get();
+App\model\admin\mover::all();
+App\model\admin\mover::pluck('cwNumber');

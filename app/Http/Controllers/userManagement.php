@@ -35,8 +35,13 @@ class userManagement extends Controller
         // $user->each(function ($media) {
         //     (isset($media->media[0])) ? $media->reviewUserProfileImgUrl = $media->media[0]->getUrl() : $media->reviewUserProfileImgUrl = "nai";
         // });
-        $user->imgUrl = $user->media[0]->getUrl();
-        return $user;
+        if(isset($user->media[0]) ){
+            $user->imgUrl = $user->media[0]->getUrl();
+            return $user;
+        }else{
+            return $user;
+        }
+        
     }
     
     /**

@@ -4,13 +4,15 @@
            <div class="row justify-content-center">
                <div class="col-md-12">
                    <div class="card" style="padding: 50px 10px 0 10px">
+                        
 
                        <div class="inner text-center" style="background-color: #dddddd;padding-bottom: 10px;">
-                           <img :src="userDetail.imgUrl" alt="" style="height: 100px;
-    width: 100px;
-    border-radius: 50px;
-    position: relative;
-    top: -43px;object-fit: cover">
+                         <span v-if="userDetail.imgUrl">
+                              <img :src="userDetail.imgUrl" alt="" class="imgcls">
+                             </span> 
+                             <span v-else>
+            <img src="/img/profile_pic.jpg" alt="Profile picture" class="imgcls">
+          </span>
                            <h5>{{userDetail.name}}</h5>
                            <h6>{{userDetail.email}}</h6>
                            
@@ -101,3 +103,12 @@
         }
     }
 </script>
+<style lang="css" scoped>
+.imgcls{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    position: relative;
+    top: -43px;object-fit: cover
+}
+</style>
