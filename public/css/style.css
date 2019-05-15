@@ -1,0 +1,7 @@
+.imgcls{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    position: relative;
+    top: -43px;object-fit: cover
+}
